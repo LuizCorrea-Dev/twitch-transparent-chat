@@ -18,7 +18,7 @@ Um aplicativo de chat transparente para streamings na Twitch, construído com El
 
 ## Download
 
-Você pode baixar a versão mais recente do aplicativo (arquivo `.exe` para Windows, e talvez outras plataformas no futuro) diretamente na página de [Releases](https://github.com/SEU_USUARIO/SEU_REPOSITORIO/releases) deste repositório no GitHub.
+Você pode baixar a versão mais recente do aplicativo (arquivo `.exe` para Windows, e talvez outras plataformas no futuro) diretamente na página de [Releases](https://github.com/LuizCorrea-Dev/twitch-transparent-chat/releases) deste repositório no GitHub.
 
 **Como Baixar:**
 
@@ -62,7 +62,7 @@ Certifique-se de ter o Node.js e o npm instalados.
 
 ```bash
 
-git clone [https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git](https://github.com/SEU_USUARIO/SEU_REPOSITORIO.git)
+git clone [https://github.com/LuizCorrea-Dev/twitch-transparent-chat.git](https://github.com/LuizCorrea-Dev/twitch-transparent-chat.git)
 
 cd twitch-transparent-chat
 
@@ -88,7 +88,7 @@ npm  start
 
 ## Contribuição
 
-Contribuições são bem-vindas! Se você tiver ideias para melhorias, relatar bugs ou quiser adicionar novas funcionalidades, sinta-se à vontade para abrir uma [Issue](https://www.google.com/search?q=https://github.com/SEU_USUARIO/SEU_REPOSITORIO/issues) ou enviar um [Pull Request](https://www.google.com/search?q=https://github.com/SEU_USUARIO/SEU_REPOSITORIO/pulls).
+Contribuições são bem-vindas! Se você tiver ideias para melhorias, relatar bugs ou quiser adicionar novas funcionalidades, sinta-se à vontade para abrir uma [Issue](https://github.com/LuizCorrea-Dev/twitch-transparent-chat/issues) ou enviar um [Pull Request](https://www.google.com/search?q=https://github.com/LuizCorrea-Dev/twitch-transparent-chat/pulls).
 
 ## Licença
 
