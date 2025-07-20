@@ -1,0 +1,263 @@
+/* styles.css */
+body {
+  background-color: rgba(0, 0, 0, 0); /* Fundo totalmente transparente */
+  margin: 0;
+  overflow: hidden;
+  font-family: "Arial", sans-serif;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+}
+
+body,
+#chat-screen {
+  background-color: transparent !important;
+  margin: 0;
+  padding: 0;
+}
+#chat-screen {
+  background-color: transparent !important;
+  padding: 0;
+  margin: 0;
+}
+
+.screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.screen.hidden {
+  display: none;
+}
+.screen.active {
+  display: flex;
+}
+#settings-screen {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos para a tela de configurações */
+#settings-screen h1 {
+  margin-bottom: 20px;
+  font-size: 1.5em;
+  color: #9146ff;
+}
+
+#settings-screen .setting-item {
+  margin-bottom: 20px;
+  width: 80%;
+  max-width: 300px;
+}
+
+#settings-screen label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1.1em;
+}
+
+#settings-screen input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #9146ff;
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1em;
+  box-sizing: border-box;
+  /* Adicionado -webkit-app-region: no-drag; para inputs */
+  -webkit-app-region: no-drag;
+}
+
+#settings-screen input[type="text"]::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+#settings-screen .explanation {
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 5px;
+}
+
+.explanation-box {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid #9146ff;
+  border-radius: 8px;
+  padding: 15px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  width: 90%;
+  max-width: 350px;
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.explanation-box h2 {
+  color: #9146ff;
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.explanation-box p {
+  font-size: 0.95em;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+.explanation-box kbd {
+  background-color: #333;
+  border-radius: 3px;
+  padding: 2px 5px;
+  font-family: monospace;
+  font-size: 0.9em;
+  color: white;
+  white-space: nowrap;
+}
+
+/* Botões */
+#settings-screen button,
+#show-settings-button {
+  background-color: #9146ff;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+  transition: background-color 0.2s ease;
+  margin-top: 20px;
+  /* Adicionado -webkit-app-region: no-drag; para botões */
+  -webkit-app-region: no-drag;
+}
+
+#settings-screen button:hover,
+#show-settings-button:hover {
+  background-color: #7a3add;
+}
+
+/* Estilos do chat container existentes */
+#chat-container {
+  background-color: transparent !important;
+  margin: 0;
+  padding: 10px 15px;
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+  width: calc(100% - 20px);
+  height: calc(100vh - 20px);
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+#chat-container::-webkit-scrollbar {
+  display: none;
+}
+
+.chat-message {
+  margin-bottom: 5px;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.1
+  ); /* Fundo semi-transparente para cada mensagem */
+  margin-bottom: 8px;
+  padding: 5px 10px;
+  word-break: break-word;
+  line-height: 1.4;
+  border-radius: 5px;
+}
+
+.username {
+  margin-right: 5px;
+  font-weight: bold;
+  color: #9146ff; /* Cor roxa da Twitch */
+}
+
+/* Estilos para o indicador de interação e botão de configurações */
+.interactive-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  color: white;
+  font-size: 1.1em;
+  z-index: 1000; /* Garante que está acima do chat */
+  display: none; /* Escondido por padrão, mostrado via JS */
+  border: 1px solid #9146ff;
+  /* Para que o overlay seja arrastável quando interativo */
+  /* -webkit-app-region: drag; será adicionado via JS */
+}
+
+.interactive-overlay span {
+  display: block;
+  margin-bottom: 10px;
+}
+
+#show-settings-button {
+  margin-top: 10px;
+}
+
+.window-header {
+  background-color: rgba(145, 70, 255, 0.3);
+  -webkit-app-region: drag;
+  display: none; /* Inicialmente escondido */
+}
+
+/* Mostra o cabeçalho apenas no modo interativo */
+.interactive-mode .window-header {
+  display: block;
+}
+#custom-title-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 30px;
+  display: flex;
+  background-color: rgba(30, 30, 30, 0.8);
+  z-index: 1000;
+}
+
+/* Mostra o título apenas no modo interativo */
+.interactive-mode .title-bar {
+  display: flex;
+}
+
+.title-bar-drag {
+  -webkit-app-region: drag;
+  flex-grow: 1;
+  height: 100%;
+}
+
+.title-bar-controls {
+  display: flex;
+}
+
+.title-bar-button {
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  -webkit-app-region: no-drag;
+}
+
+.title-bar-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}

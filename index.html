@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; connect-src wss://irc-ws.chat.twitch.tv/;"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twitch Transparent Chat</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Barra de título personalizada (só aparece nas configurações) -->
+    <div id="custom-title-bar" style="display: none" ;>
+      <div class="title-bar-drag"></div>
+      <div class="title-bar-controls">
+        <button class="title-bar-button" id="minimize-btn">−</button>
+        <button class="title-bar-button" id="maximize-btn">□</button>
+        <button class="title-bar-button" id="close-btn">×</button>
+      </div>
+    </div>
+
+    <!-- Tela de configurações -->
+    <div id="settings-screen" class="screen active">
+      <h1>⚙️ Configurações do Chat Twitch</h1>
+      <div class="setting-item">
+        <label for="channel-name-input">Nome do Canal:</label>
+        <input
+          type="text"
+          id="channel-name-input"
+          placeholder="Ex: rootszera_"
+        />
+        <p class="explanation">
+          Insira o nome do canal Twitch que você deseja monitorar (apenas o
+          nome, sem '#').
+        </p>
+      </div>
+
+      <div class="explanation-box">
+        <h2>Como Interagir com o Chat:</h2>
+        <p>
+          Pressione <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>I</kbd> para
+          alternar entre o <strong>Modo de Interação</strong> (clicável, para
+          mover e usar botões) e o <strong>Modo Transparente</strong> (ignora
+          cliques do mouse, permite clicar através do chat).
+        </p>
+        <p>
+          No <strong>Modo Interativo</strong>, você pode arrastar a janela do
+          chat e usar o botão de configurações.
+        </p>
+      </div>
+
+      <button id="start-chat-button">Iniciar Chat</button>
+    </div>
+
+    <!-- Tela do chat -->
+    <div id="chat-screen" class="screen hidden">
+      <div id="chat-container"></div>
+    </div>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

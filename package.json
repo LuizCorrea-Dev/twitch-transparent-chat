@@ -1,0 +1,43 @@
+{
+  "name": "twitch-transparent-chat",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [],
+  "author": "Rootszera",
+  "license": "ISC",
+  "description": "Um chat transparente para Twitch",
+  "dependencies": {
+    "tmi.js": "^1.8.5"
+  },
+  "devDependencies": {
+    "electron": "^37.2.3",
+    "electron-builder": "^26.0.12"
+  },
+  "build": {
+    "appId": "com.rootszera.twitchtransparentchat",
+    "productName": "TwitchTransparentChat",
+    "copyright": "Copyright © 2025 Rootszera",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/{src,docs,test,example,benchmark}",
+      "!**/*.map"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    }
+  }
+}
