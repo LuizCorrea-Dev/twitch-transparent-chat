@@ -88,7 +88,7 @@ npm  start
 
 ### Executando em Modo de Desenvolvimento para aprimorar com ia
 
-abra este link do projeto em modo de estrutura [modo dev estrutura](https://aithub.com/LuizCorrea-Dev/twitch-transparent-chat).
+abra este link do projeto em modo de estrutura [modo dev estrutura](https://uithub.com/LuizCorrea-Dev/twitch-transparent-chat).
 
 
 ## Contribuição
