@@ -86,6 +86,11 @@ npm  start
 
 ```
 
+### Executando em Modo de Desenvolvimento para aprimorar com ia
+
+abra este link do projeto em modo de estrutura [modo dev estrutura](https://aithub.com/LuizCorrea-Dev/twitch-transparent-chat).
+
+
 ## Contribuição
 
 Contribuições são bem-vindas! Se você tiver ideias para melhorias, relatar bugs ou quiser adicionar novas funcionalidades, sinta-se à vontade para abrir uma [Issue](https://github.com/LuizCorrea-Dev/twitch-transparent-chat/issues) ou enviar um [Pull Request](https://www.google.com/search?q=https://github.com/LuizCorrea-Dev/twitch-transparent-chat/pulls).
